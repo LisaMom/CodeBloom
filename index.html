@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/logo-icon.png" />
+    <link rel="apple-touch-icon" href="/images/logo-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta
+      name="description"
+      content="DevTech - Master modern software engineering with interactive career roadmaps, deep-dive lessons, and practical quizzes."
+    />
+    <title>DevTech - Developer Roadmaps & Interactive Learning</title>
+    <!-- Anti-FOUC: apply theme class before React hydrates -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("DevTech_theme");
+          var prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          if (t === "light" || (!t && !prefersDark)) {
+            document.documentElement.classList.remove("dark");
+            document
+              .querySelector('meta[name="theme-color"]')
+              ?.setAttribute("content", "#f5f5f5");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body
+    class="bg-whitesmoke dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
