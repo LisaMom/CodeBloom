@@ -1,8 +1,8 @@
-# 🌸 DevTech
+# 🌸 CodeBloom
 
 > **Interactive Developer Career Roadmaps, Bite-Sized Lessons, and Self-Assessment Quizzes.**
 
-DevTech is an open-source web application designed to help developers level up their careers with structured, verified learning paths. Say goodbye to tutorial hell and hello to opinionated curriculum blueprints.
+CodeBloom is an open-source web application designed to help developers level up their careers with structured, verified learning paths. Say goodbye to tutorial hell and hello to opinionated curriculum blueprints.
 
 ---
 
@@ -21,7 +21,7 @@ DevTech is an open-source web application designed to help developers level up t
 ## 📁 Project Structure
 
 ```text
-DevTech/
+CodeBloom/
 ├── public/
 │   ├── images/
 │   │   ├── hero-developer.png           # Hero illustration graphic
@@ -31,7 +31,7 @@ DevTech/
 │
 ├── src/
 │   ├── assets/
-│   │   └── logo.svg                     # DevTech vector logo
+│   │   └── logo.svg                     # CodeBloom vector logo
 │   │
 │   ├── components/
 │   │   ├── common/
@@ -161,4 +161,4 @@ npm run preview
 
 ## 📄 License
 
-MIT © [DevTech](https://github.com). Open-source educational content.
+MIT © [CodeBloom](https://github.com). Open-source educational content.

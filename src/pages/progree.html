@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress | CodeBloom</title>
+    <link rel="icon" type="image/png" href="/assets/logo-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+    <title>Progress | CodeBloom</title>
+    <meta
+      name="description"
+      content="Verify and view your course completion certificates and quiz achievement credentials."
+    />
+</head>
+<body>
+    
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("CodeBloom_theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (t === "light" || (!t && !prefersDark)) {
+            document.documentElement.classList.remove("dark");
+            document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#f5f5f5");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <div id="app" class="min-h-screen flex flex-col"></div>
+    <script type="module" src="/src/ts/progress.ts"></script>
+</body>
+</html>

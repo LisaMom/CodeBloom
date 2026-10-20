@@ -6,7 +6,7 @@ export interface SEOProps {
   canonicalUrl?: string;
 }
 
-const DEFAULT_TITLE = 'DevTech - Interactive Developer Roadmaps & Lessons';
+const DEFAULT_TITLE = 'CodeBloom - Interactive Developer Roadmaps & Lessons';
 const DEFAULT_DESCRIPTION =
   'Master modern software engineering with interactive roadmaps, deep-dive lessons, and practical quizzes. Level up your coding journey today.';
 
@@ -18,7 +18,7 @@ export const updateSEO = ({
   canonicalUrl = window.location.href,
 }: SEOProps): void => {
   // Update document title
-  document.title = title ? `${title} | DevTech` : DEFAULT_TITLE;
+  document.title = title ? `${title} | CodeBloom` : DEFAULT_TITLE;
 
   // Update meta tags
   const setMeta = (nameOrProperty: string, value: string, isProperty = false) => {

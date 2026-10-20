@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/logo-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+    <title>Developer Roadmaps | CodeBloom</title>
+    <meta
+      name="description"
+      content="Step-by-step developer roadmaps covering Frontend, Backend, DevOps, AI, and Fullstack systems."
+    />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("CodeBloom_theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (t === "light" || (!t && !prefersDark)) {
+            document.documentElement.classList.remove("dark");
+            document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#f5f5f5");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-whitesmoke dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors">
+    <div id="app" class="min-h-screen flex flex-col"></div>
+    <script type="module" src="/src/ts/roadmaps.ts"></script>
+  </body>
+</html>

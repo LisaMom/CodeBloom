@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DevTech.dev/sitemap.xml
+Sitemap: https://CodeBloom.dev/sitemap.xml

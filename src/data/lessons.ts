@@ -44,7 +44,7 @@ const statusBadge = document.querySelector('#status-pill');
 actionBtn.addEventListener('click', () => {
   statusBadge.textContent = 'Enrolled Successfully!';
   statusBadge.classList.add('bg-emerald-500', 'text-white');
-  console.log('User joined DevTech course!');
+  console.log('User joined CodeBloom course!');
 });`
           }
         ],
@@ -472,7 +472,7 @@ int main() {
           {
             language: 'java',
             filename: 'LessonController.java',
-            code: `package com.DevTech.api;
+            code: `package com.CodeBloom.api;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -539,11 +539,11 @@ public class LessonController {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DevTech Learning</title>
+  <title>CodeBloom Learning</title>
 </head>
 <body>
   <header>
-    <h1>DevTech Academy</h1>
+    <h1>CodeBloom Academy</h1>
   </header>
   <main>
     <article>
@@ -666,7 +666,7 @@ public class LessonController {
           {
             language: 'javascript',
             filename: 'variables.js',
-            code: `const platform = "DevTech";\nlet streak = 5;\nconsole.log(platform, streak);`
+            code: `const platform = "CodeBloom";\nlet streak = 5;\nconsole.log(platform, streak);`
           }
         ]
       }

@@ -1,6 +1,6 @@
 import { QuizAttempt } from '../types/quiz';
 
-const PREFIX = 'DevTech_';
+const PREFIX = 'CodeBloom_';
 
 export const storage = {
   get<T>(key: string, defaultValue: T): T {

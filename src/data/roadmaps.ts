@@ -100,7 +100,7 @@ export const roadmapsData: Roadmap[] = [
             completed: false,
             keyTopics: ['Project scoping & wireframing', 'Component hierarchy architecture', 'Git version control', 'Vercel / Netlify deployment'],
             resources: [
-              { id: 'wr5', title: 'Project Planning Guide', url: 'https://DevTech.dev', type: 'article' }
+              { id: 'wr5', title: 'Project Planning Guide', url: 'https://CodeBloom.dev', type: 'article' }
             ]
           }
         ]

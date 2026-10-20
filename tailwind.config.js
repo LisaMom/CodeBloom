@@ -5,9 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          '"Google Sans"'
-        ],
+        sans: ['"Google Sans"'],
       },
       colors: {
         whitesmoke: "#f5f5f5",
@@ -26,7 +24,7 @@ export default {
           900: "#0f172a",
           950: "#020617",
         },
-        // Figma Emerald tokens (DevTech primary)
+        // Figma Emerald tokens (CodeBloom primary)
         emerald: {
           50: "#ecfdf5",
           100: "#d1fae5",
@@ -39,7 +37,7 @@ export default {
           800: "#065f46",
           900: "#064e3b",
         },
-        // Figma Indigo tokens (DevTech accent)
+        // Figma Indigo tokens (CodeBloom accent)
         indigo: {
           50: "#eef2ff",
           100: "#e0e7ff",

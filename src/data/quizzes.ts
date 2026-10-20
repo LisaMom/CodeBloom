@@ -26,7 +26,7 @@ export const quizzesData: Quiz[] = [
       },
       {
         id: 'js-q2',
-        question: 'What is the evaluated result of `typeof "DevTech"` in JavaScript?',
+        question: 'What is the evaluated result of `typeof "CodeBloom"` in JavaScript?',
         options: [
           { id: 'j2a', text: '"string"', isCorrect: true, explanation: 'Values enclosed in quotes evaluate to the primitive "string" type.' },
           { id: 'j2b', text: '"text"', isCorrect: false },

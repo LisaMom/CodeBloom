@@ -5,7 +5,7 @@ type Theme = 'light' | 'dark';
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
     // Check localStorage
-    const saved = localStorage.getItem('DevTech_theme') as Theme | null;
+    const saved = localStorage.getItem('CodeBloom_theme') as Theme | null;
     if (saved === 'light' || saved === 'dark') {
       return saved;
     }
@@ -25,7 +25,7 @@ export function useTheme() {
       root.classList.remove('dark');
       root.setAttribute('data-theme', 'light');
     }
-    localStorage.setItem('DevTech_theme', theme);
+    localStorage.setItem('CodeBloom_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

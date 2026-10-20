@@ -2,6 +2,115 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    color-scheme: light !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, header, footer, actions, and unprinted elements */
+  header,
+  footer,
+  nav,
+  button,
+  input,
+  .no-print,
+  #nav-theme-toggle,
+  #nav-mobile-btn,
+  #nav-auth-container,
+  #mobile-menu-backdrop {
+    display: none !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  /* Certificate print target: ensure all elements and text are fully visible */
+  #certificate,
+  #certificate *,
+  .certificate-print-target,
+  .certificate-print-target * {
+    visibility: visible !important;
+    opacity: 1 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #certificate,
+  .certificate-print-target {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 10px solid #e2e8f0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20mm !important;
+  }
+
+  /* Ensure high contrast dark typography on white paper */
+  #certificate h1,
+  .certificate-print-target h1 {
+    color: #0f172a !important;
+    font-size: 26pt !important;
+  }
+
+  #certificate h2,
+  .certificate-print-target h2 {
+    color: #047857 !important;
+    border-bottom: 2px solid #10b981 !important;
+    font-size: 28pt !important;
+  }
+
+  #certificate h3,
+  .certificate-print-target h3 {
+    color: #4338ca !important;
+    font-size: 20pt !important;
+  }
+
+  #certificate p,
+  .certificate-print-target p,
+  #certificate span,
+  .certificate-print-target span,
+  #certificate strong,
+  .certificate-print-target strong {
+    color: #334155 !important;
+  }
+
+  #certificate .text-slate-500,
+  .certificate-print-target .text-slate-500 {
+    color: #64748b !important;
+  }
+}
+
 /* -------------------------------------------------------------
  * Typography: Google Sans (Self-hosted from public/fonts/)
  * ------------------------------------------------------------- */
@@ -38,7 +147,7 @@
 }
 
 /* -------------------------------------------------------------
- * Tailwind CSS V4 Theme Tokens (from DevTech-figma-color-tokens.json)
+ * Tailwind CSS V4 Theme Tokens (from CodeBloom-figma-color-tokens.json)
  * ------------------------------------------------------------- */
 @theme {
   --font-sans:
@@ -232,4 +341,39 @@ body {
 .glass {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+/* -------------------------------------------------------------
+ * Navigation Hover Dropdown Menu Animations
+ * ------------------------------------------------------------- */
+.nav-dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px) scale(0.97);
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Open states: hover, focus-within, and active class */
+.group:hover .nav-dropdown-menu,
+.group:focus-within .nav-dropdown-menu,
+.nav-dropdown-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.nav-dropdown-chevron {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .nav-dropdown-chevron,
+.group:focus-within .nav-dropdown-chevron,
+.group.is-open .nav-dropdown-chevron,
+.nav-dropdown-btn[aria-expanded="true"] .nav-dropdown-chevron {
+  transform: rotate(180deg);
 }

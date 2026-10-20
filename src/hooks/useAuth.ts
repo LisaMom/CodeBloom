@@ -5,7 +5,7 @@ interface AuthState {
   user: { email: string } | null;
 }
 
-const AUTH_KEY = 'DevTech_auth';
+const AUTH_KEY = 'CodeBloom_auth';
 
 function loadAuth(): AuthState {
   try {
